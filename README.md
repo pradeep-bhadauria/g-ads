@@ -1,39 +1,69 @@
-## heroku-angular2-seed
+<img width="150" src="https://i.cloudup.com/zfY6lL7eFa-3000x3000.png" />
+<img width="50" src="https://angular.io/assets/images/logos/angular/angular.svg" />
 
-A simple starter project demonstrating the basic concepts of Angular 2.
+## Angular4+ Express Starter ( Advanced )
 
+- Angular 5+
+- ExpressJS ( 4.x - with compression )
+- Webpack ( angular-cli )
 
-### Usage
-- Clone or fork this repository
-- Make sure you have [node.js](https://nodejs.org/) installed version 5+
-- Make sure you have NPM installed version 3+
-- `WINDOWS ONLY` run `npm install -g webpack webpack-dev-server typescript` to install global dependencies
-- run `npm install` to install dependencies
-- run `npm start` to fire up dev server
-- open browser to [`http://localhost:3000`](http://localhost:3000)
-- if you want to use other port, open `package.json` file, then change port in `--port 3000` script
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-### Deployment to Heroku
-First of all, this project is not forked from `angular/angular2-seed` for Heroku deployment requires some changes that look critically irrelevant to the original project.
+## Concepts
 
-- Meet all Heroku prerequisites i.e. free [Heroku account](https://signup.heroku.com/signup/dc) and Heroku CLI [installed](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)
-- Clone or fork this repository
-- Run dev server the same way as above
-- Create Heroku application with `heroku create`
-- Add Node.js buildpack: `heroku buildpacks:add heroku/nodejs`
-- Add static buildpack: `heroku buildpacks:add https://github.com/hone/heroku-buildpack-static`
-- At the settings page of your app at Heroku set value for `CONFIG_VAR` config var
-- Deploy the app with `git push heroku master`
-- Use `.env` file for config vars of development environment
+- Redux ( NgRx/Store - with server calls)
+- Smart & dumb components
+- AOT: Ahead-of-Time compilation
+- Advanced routing ( lazy loading, router outlets...)
 
-### Heroku troubleshooting
-Removing failing `@types/core-js` is a little bit tricky. Heroku `node_modules` caching is awesomely helpful. You can delete them whichever way you like with `heroku run bash` — they'll never die. The key to their immortality is accessible only from Heroku cache:
+## Install / Development
+
 ```bash
-$ heroku plugins:install heroku-repo
-$ heroku repo:purge_cache -a appname
+git clone https://github.com/vladotesanovic/angular2-express-starter
+cd angular2-express-starter
+
+# Install dependencies
+npm install
+
+# start server
+npm run start
+
+# Client url: http://localhost:4200
+# Application ( epxress ) API: http://localhost:4300
 ```
 
-### Optionally
+Install Redux DevTools chrome extenstion:
 
-- Take a look at [heroku-static-buildpack](https://github.com/heroku/heroku-buildpack-static)
-- Take a look at pretty self-explaining commits
+https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd
+
+## Build / Production
+
+```bash
+
+npm run build
+
+## Deploy dist folder to app server
+
+Structure of dist folder:
+
+/dist/server <-- expressjs
+/dist/client <-- angular2
+
+```
+
+## Note
+
+All html and css are from: http://www.w3schools.com/howto/
+<table style="border: 0">
+  <tr>
+    <td><img width="200" src="http://www.innovic.io/favicon.png" /></td>
+    <td>
+      <ul>
+        <li>INNOVIC doo</li>
+        <li>Software consulting company for building full stack solutions.</li>
+        <li>Proficient in: NodeJS, TypeScript, Angular, MongoDB...</li>
+        <li><b>You have project for us? hello@innovic.io</b></li>
+      </ul>
+    </td>
+  </tr>
+</table>

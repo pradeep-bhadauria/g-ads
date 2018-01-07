@@ -1,29 +1,9 @@
-<h3>
-  Angular 2 Seed
-</h3>
-<nav>
-	<a [routerLink]="['/']">
-    Home
-  </a>
-  |
-	<a [routerLink]="['/about']">
-    About
-  </a>
-  |
-	<a [routerLink]="['/github', 'angular']">
-    Github Repos
-  </a>
-  |
-	<a [routerLink]="['/contact']">
-    Contact Us
-  </a>
-</nav>
+<app-ui-top-navigation></app-ui-top-navigation>
 
-<main>
-	<router-outlet></router-outlet>
-</main>
+<app-ui-sub-navigation [title]="(observable$ | async)?.title" [description]="(observable$ | async)?.text"></app-ui-sub-navigation>
 
+<div class="main">
+  <router-outlet></router-outlet>
+</div>
 
-<footer>
-  © 2016
-</footer>
+<router-outlet name='modal'></router-outlet>
